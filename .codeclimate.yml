@@ -1,0 +1,9 @@
+version: "2"
+plugins:
+  rubocop:
+    enabled: true
+exclude_patterns:
+  - 'spec/*'
+  - 'Gemfile'
+  - 'Rakefile'
+  - '*.gemspec'

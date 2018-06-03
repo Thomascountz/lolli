@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Thomascountz/lolli.svg?branch=master)](https://travis-ci.org/Thomascountz/lolli) [![Gem Version](https://badge.fury.io/rb/lolli.svg)](https://badge.fury.io/rb/lolli) 
+
 # Lolli, beta. <img alt="lolli logo" src="https://raw.githubusercontent.com/thomascountz/lolli/master/assets/lolli_logo.png" align="right">
 
 Lolli is a lightweight unit testing framework built for learning, currently in beta. 
