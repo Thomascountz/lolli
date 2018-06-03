@@ -89,7 +89,7 @@ description
     Actual: false
 ```
 
-# Example Usage
+## Example Usage
 
 You can add multiple `example` blocks to a single test class:
 
