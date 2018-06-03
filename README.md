@@ -6,7 +6,7 @@ Lolli is a lightweight unit testing framework built for learning, currently in b
 
 Lolli's aim is to help introduce testing to developers by lowering the barrier-of-entry of more feature-rich fraimeworks.
 
-In my experiece, due to the necessity of testing frameworks, which can be syntactically amorphic and DSL-heavy, the cognitive leap of learning testing in Ruby can be challenging. Lolli doesn't wish to replace these vital frameworks, but rather mimic their most basic behavior in order to shift the learning conversation towards the concepts of testing, rather than the tools to do it.
+In my experiece, due to the necessity of testing frameworks which can be syntactically amorphic and DSL-heavy, the cognitive leap of learning testing in Ruby can be challenging. Lolli doesn't wish to replace these vital frameworks, but rather mimic their most basic behavior in order to shift the learning conversation towards the concepts of testing, rather than the tools to do it.
 
 It should be doubly noted that Lolli is not fit for testing production code. After learning with Lolli, the hope is that making the transition to a more appropriate framework will be easier than having started with one in the first place.
 
