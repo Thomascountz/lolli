@@ -1,4 +1,4 @@
-# Lolli, beta.
+# Lolli, beta. <img alt="lolli logo" src="https://raw.githubusercontent.com/thomascountz/lolli/master/assets/lolli_logo.png" align="right">
 
 Lolli is a lightweight unit testing framework, currently in beta. Lolli is aimed at helping developers who are new to testing and TDD. It is extremely feature- and syntax- light, with the hope of softening the barrier of introducing unit testing practices.
 
