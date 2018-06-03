@@ -1,6 +1,14 @@
-# Lolli
+# Lolli, beta.
 
-Your first micro unit testing framework
+Lolli is a lightweight unit testing framework, currently in beta. Lolli is aimed at helping developers who are new to testing and TDD. It is extremely feature- and syntax- light, with the hope of softening the barrier of introducing unit testing practices.
+
+In my experiece, the bar-to-entry for introducing testing in Ruby can be high, simply due to the use of testing frameworks which are feature-dense and DSL-heavy ecosystem. Lolli doesn't aim to replace these vital frameworks, but rather mimic their most basic behavior to shift learning conversation towards the concepts of testing, rather then the tools to do it.
+
+It should be doubly noted that Lolli is not fit for testing production code. After learning with Lolli, the hope is that making the transition to a more appropriate framework will be easier than having started with one in the first place.
+
+To get started with Lolli, follow the installation and example usage sections below. 
+
+More detailed documentation is forthcoming.
 
 ## Installation
 
@@ -18,9 +26,103 @@ Or install it yourself as:
 
     $ gem install lolli
 
-## Usage
+## Basic Usage
 
-TODO: Write usage instructions here
+Create a new test file:
+
+```
+$ touch ./test_folder/example_test.rb
+```
+
+In that file, require Lolli:
+
+```ruby
+require 'lolli'
+```
+
+Open a new class that inherits from Lolli's `Example` class:
+
+```ruby
+class ExampleTest < Lolli::Example
+```
+
+You now have access to create Lolli `example` blocks. The structure looks like this:
+```ruby
+example "description" do
+  expected = true
+  actual = true
+  assert_equals(expected: expected, actual: actual)
+end
+```
+NOTE: `example` blocks must end with a matcher. 
+
+To run the test, run the `ruby` command from the terminal with the path to your test file:
+```
+$ ruby ./test_folder/example_test.rb
+```
+
+The output should look like this:
+```
+description
+  true
+```
+
+That's it!
+
+A failing example might look like this:
+
+```ruby
+example "description" do
+  expected = true
+  actual = false
+  assert_equals(expected: expected, actual: actual)
+end
+```
+
+Which will output this:
+
+```
+$ ruby ./test_folder/example_test.rb
+description
+  false
+    Expected: true
+    Actual: false
+```
+
+# Example Usage
+
+You can add multiple `example` blocks to a single test class:
+
+```ruby
+require 'lolli'
+
+class ExampleTest < Lolli::Example
+  example "it works!" do
+    expected = 4
+    actual = 2 + 2
+    assert_equals(expected: expected, actual: actual)
+  end
+
+  example "it doesn't work." do
+    expected = 4
+    actual = 2 + 3
+    assert_equals(expected: expected, actual: actual)
+  end
+end
+```
+
+Which will output:
+
+```
+$ ruby ./test_folder/example_test.rb
+it works!
+  true
+
+it doesn't work.
+  false
+    Expected: 4
+    Actual: 5
+```
 
 ## Development
 
